@@ -1,0 +1,53 @@
+body {
+	font-family: 'Montserrat', Arial, sans;
+	background-color: #9B59B6;
+	color: #fff;
+	text-align: center;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 75px;
+	margin-top: 50px;
+	margin-bottom: 0;
+}
+
+ul {
+	margin: -20px 0 20px 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li {
+	font-size: 260px;
+}
+
+.icon-basecloud, .icon-cloud {
+	color: rgba(255, 255, 255, .85);
+}
+
+.icon-sun, .icon-sunny {
+	color: gold;
+}
+
+.icon-rainy, .icon-showers, .icon-frosty, .icon-sleet {
+	color: #85d8f7;
+}
+
+.icon-mist {
+	color: rgba(255, 255, 255, .75);
+}
+
+small {
+	position: absolute;
+	bottom: 15px;
+	left: 0;
+	right: 0;
+	font-weight: 300;
+	font-size: 12px;
+	letter-spacing: 1.5px;
+}
+
+small a {
+	color: #fff;
+}

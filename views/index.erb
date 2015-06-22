@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>YOGONNARAIN</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="/forecast_font/iconvault-preview.css">
+		<link rel="stylesheet" href="/styles.css">
+	</head>
+	<body>
+		<h1><%= @summary %></h1>
+
+		<% unless @icon[:icon] == false %>
+		<ul>
+			<% if @icon[:cloud] %><li class="<%= @icon[:cloud] %>"></li><% end %>
+			<li class="<%= @icon[:icon] %>"></li>
+		</ul>
+		<% end %>
+
+		<small>Powered by <a href="http://forecast.io">Forecast</a></small>
+	</body>
+</html>
