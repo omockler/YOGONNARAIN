@@ -5,6 +5,8 @@ require 'slim'
 require 'dotenv'
 Dotenv.load
 
+require_relative 'app/helpers'
+
 configure { set :server, :puma }
 
 FORECAST_API_KEY = ENV['FORECAST_API_KEY']
@@ -30,10 +32,13 @@ get '/gonna-rain/:lat/:long' do |lat, long|
 
   if json_data.key? 'minutely'
     @summary = json_data['minutely']['summary']
+    icon = json_data['minutely']['icon']
   else
     @summary = json_data['hourly']['summary']
+    icon = json_data['hourly']['icon']
   end
 
+  @icon = iconify(icon)
 
   erb :index
 end
